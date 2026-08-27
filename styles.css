@@ -1,4 +1,6 @@
 /* First Bank Nigeria Official Brand Colors */
+@import url('https://fonts.googleapis.com/css2?family=Calibri:wght@300;400;700&display=swap');
+
 :root {
     /* First Bank Official Colors */
     --fb-navy: #003366;        /* First Bank Primary Navy Blue */
@@ -22,8 +24,13 @@
     box-sizing: border-box;
 }
 
+html {
+    scroll-behavior: smooth;
+}
+
 body {
-    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+    font-family: 'Calibri', 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+    font-weight: 400;
     line-height: 1.6;
     color: var(--text-dark);
     background-color: #ffffff;
@@ -56,18 +63,17 @@ body {
     align-items: center;
     gap: 12px;
     text-decoration: none;
+    transition: transform 0.3s ease;
 }
 
-.logo svg {
-    border-radius: 8px;
-    box-shadow: 0 2px 8px rgba(0, 51, 102, 0.15);
+.logo:hover {
+    transform: scale(1.02);
 }
 
-.logo-text {
-    font-size: 24px;
-    font-weight: 700;
-    color: var(--fb-navy);
-    letter-spacing: -0.5px;
+.logo-svg {
+    height: 50px;
+    width: auto;
+    filter: drop-shadow(0 2px 4px rgba(0, 51, 102, 0.1));
 }
 
 .nav-links {
@@ -79,14 +85,16 @@ body {
 .nav-links a {
     color: var(--text-dark);
     text-decoration: none;
-    font-weight: 500;
+    font-weight: 400;
     font-size: 15px;
+    font-family: 'Calibri', sans-serif;
     transition: all 0.3s ease;
     position: relative;
 }
 
 .nav-links a:hover {
     color: var(--fb-navy);
+    font-weight: 700;
 }
 
 .nav-links a::after {
@@ -123,6 +131,8 @@ body {
     margin-bottom: 24px;
     color: var(--fb-navy);
     font-weight: 700;
+    font-family: 'Calibri', sans-serif;
+    letter-spacing: -0.5px;
 }
 
 .hero-content p {
@@ -130,13 +140,16 @@ body {
     color: var(--text-light);
     margin-bottom: 32px;
     line-height: 1.7;
+    font-family: 'Calibri', sans-serif;
+    font-weight: 300;
 }
 
 .cta-subtitle {
     margin-top: 12px !important;
     font-size: 14px;
     color: var(--text-light);
-    font-weight: 500;
+    font-weight: 300;
+    font-family: 'Calibri', sans-serif;
 }
 
 /* Phone Mockup */
@@ -188,6 +201,7 @@ body {
     color: white;
     font-weight: 600;
     font-size: 12px;
+    font-family: 'Calibri', sans-serif;
 }
 
 .app-content {
@@ -203,12 +217,14 @@ body {
     border-radius: 16px;
     margin-bottom: 24px;
     box-shadow: 0 12px 30px rgba(0, 51, 102, 0.3);
+    font-family: 'Calibri', sans-serif;
 }
 
 .wallet-card p {
     font-size: 12px;
     opacity: 0.9;
     margin-bottom: 8px;
+    font-weight: 300;
 }
 
 .wallet-card h2 {
@@ -232,8 +248,9 @@ body {
     background: var(--bg-light);
     text-align: center;
     font-size: 11px;
-    font-weight: 500;
+    font-weight: 400;
     color: var(--fb-navy);
+    font-family: 'Calibri', sans-serif;
 }
 
 .action-icon {
@@ -246,11 +263,12 @@ body {
     border: none;
     border-radius: 8px;
     font-size: 16px;
-    font-weight: 600;
+    font-weight: 700;
     cursor: pointer;
     transition: all 0.3s ease;
     display: inline-block;
     letter-spacing: 0.5px;
+    font-family: 'Calibri', sans-serif;
 }
 
 .cta-button.primary {
@@ -286,6 +304,7 @@ body {
     margin-bottom: 60px;
     color: var(--fb-navy);
     font-weight: 700;
+    font-family: 'Calibri', sans-serif;
 }
 
 .features-grid {
@@ -320,13 +339,16 @@ body {
     font-size: 20px;
     margin-bottom: 12px;
     color: var(--fb-navy);
-    font-weight: 600;
+    font-weight: 700;
+    font-family: 'Calibri', sans-serif;
 }
 
 .feature-card p {
     color: var(--text-light);
     font-size: 14px;
     line-height: 1.6;
+    font-family: 'Calibri', sans-serif;
+    font-weight: 300;
 }
 
 /* Benefits Section */
@@ -347,6 +369,7 @@ body {
     margin-bottom: 40px;
     color: var(--fb-navy);
     font-weight: 700;
+    font-family: 'Calibri', sans-serif;
 }
 
 .benefits-list {
@@ -378,12 +401,15 @@ body {
     font-size: 18px;
     margin-bottom: 8px;
     color: var(--fb-navy);
-    font-weight: 600;
+    font-weight: 700;
+    font-family: 'Calibri', sans-serif;
 }
 
 .benefits-list p {
     color: var(--text-light);
     font-size: 14px;
+    font-family: 'Calibri', sans-serif;
+    font-weight: 300;
 }
 
 .stats-card {
@@ -406,11 +432,14 @@ body {
     color: var(--fb-navy);
     margin-bottom: 8px;
     font-weight: 700;
+    font-family: 'Calibri', sans-serif;
 }
 
 .stat p {
     color: var(--text-light);
     font-size: 14px;
+    font-family: 'Calibri', sans-serif;
+    font-weight: 300;
 }
 
 /* Security Section */
@@ -425,6 +454,7 @@ body {
     margin-bottom: 16px;
     color: var(--fb-navy);
     font-weight: 700;
+    font-family: 'Calibri', sans-serif;
 }
 
 .security-subtitle {
@@ -432,6 +462,8 @@ body {
     color: var(--text-light);
     margin-bottom: 60px;
     font-size: 18px;
+    font-family: 'Calibri', sans-serif;
+    font-weight: 300;
 }
 
 .security-grid {
@@ -463,12 +495,15 @@ body {
     font-size: 18px;
     margin-bottom: 12px;
     color: var(--fb-navy);
-    font-weight: 600;
+    font-weight: 700;
+    font-family: 'Calibri', sans-serif;
 }
 
 .security-card p {
     color: var(--text-light);
     font-size: 14px;
+    font-family: 'Calibri', sans-serif;
+    font-weight: 300;
 }
 
 /* Testimonials Section */
@@ -483,6 +518,7 @@ body {
     margin-bottom: 60px;
     color: var(--fb-navy);
     font-weight: 700;
+    font-family: 'Calibri', sans-serif;
 }
 
 .testimonials-grid {
@@ -512,6 +548,8 @@ body {
     margin-bottom: 20px;
     line-height: 1.7;
     font-style: italic;
+    font-family: 'Calibri', sans-serif;
+    font-weight: 300;
 }
 
 .testimonial-author {
@@ -529,19 +567,24 @@ body {
     display: flex;
     align-items: center;
     justify-content: center;
-    font-weight: 600;
+    font-weight: 700;
+    font-family: 'Calibri', sans-serif;
 }
 
 .testimonial-author h4 {
     font-size: 15px;
     color: var(--fb-navy);
     margin-bottom: 2px;
+    font-weight: 700;
+    font-family: 'Calibri', sans-serif;
 }
 
 .testimonial-author p {
     font-size: 13px;
     color: var(--text-light);
     margin: 0;
+    font-family: 'Calibri', sans-serif;
+    font-weight: 300;
 }
 
 /* CTA Section */
@@ -556,12 +599,15 @@ body {
     font-size: 48px;
     margin-bottom: 16px;
     font-weight: 700;
+    font-family: 'Calibri', sans-serif;
 }
 
 .cta-section p {
     font-size: 18px;
     margin-bottom: 40px;
     opacity: 0.95;
+    font-family: 'Calibri', sans-serif;
+    font-weight: 300;
 }
 
 .cta-buttons {
@@ -607,9 +653,10 @@ body {
     color: var(--fb-navy);
     text-decoration: none;
     border-radius: 8px;
-    font-weight: 600;
+    font-weight: 700;
     font-size: 15px;
     transition: all 0.3s ease;
+    font-family: 'Calibri', sans-serif;
 }
 
 .store-link:hover {
@@ -634,8 +681,9 @@ body {
 .footer-section h4 {
     margin-bottom: 16px;
     font-size: 16px;
-    font-weight: 600;
+    font-weight: 700;
     color: var(--fb-gold);
+    font-family: 'Calibri', sans-serif;
 }
 
 .footer-section ul {
@@ -649,6 +697,8 @@ body {
     display: block;
     margin-bottom: 10px;
     transition: color 0.3s ease;
+    font-family: 'Calibri', sans-serif;
+    font-weight: 300;
 }
 
 .footer-section a:hover {
@@ -665,6 +715,8 @@ body {
     font-size: 13px;
     color: rgba(255, 255, 255, 0.6);
     margin: 8px 0;
+    font-family: 'Calibri', sans-serif;
+    font-weight: 300;
 }
 
 /* Responsive Design */
