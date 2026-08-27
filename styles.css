@@ -1,17 +1,19 @@
-/* First Bank Brand Colors */
+/* First Bank Nigeria Official Brand Colors */
 :root {
-    --primary-green: #00A651;
-    --primary-dark: #003d2b;
-    --primary-light: #e8f5e9;
-    --secondary-blue: #0052CC;
-    --accent-orange: #FF6B00;
+    /* First Bank Official Colors */
+    --fb-navy: #003366;        /* First Bank Primary Navy Blue */
+    --fb-gold: #D4AF37;        /* Gold Accent */
+    --fb-red: #DC143C;         /* Secondary Red */
+    --fb-light-blue: #E8F0F7;  /* Light Blue Background */
+    
+    /* Extended Palette */
     --text-dark: #1a1a1a;
     --text-light: #666666;
     --border-light: #e0e0e0;
     --bg-light: #f5f5f5;
-    --success: #00A651;
-    --warning: #FF6B00;
-    --error: #D32F2F;
+    --success: #27AE60;
+    --warning: #F39C12;
+    --error: #E74C3C;
 }
 
 * {
@@ -36,7 +38,7 @@ body {
 /* Navigation Bar */
 .navbar {
     background-color: #ffffff;
-    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+    box-shadow: 0 2px 12px rgba(0, 51, 102, 0.1);
     position: sticky;
     top: 0;
     z-index: 1000;
@@ -53,14 +55,19 @@ body {
     display: flex;
     align-items: center;
     gap: 12px;
-    font-size: 24px;
-    font-weight: 700;
-    color: var(--primary-dark);
     text-decoration: none;
 }
 
 .logo svg {
     border-radius: 8px;
+    box-shadow: 0 2px 8px rgba(0, 51, 102, 0.15);
+}
+
+.logo-text {
+    font-size: 24px;
+    font-weight: 700;
+    color: var(--fb-navy);
+    letter-spacing: -0.5px;
 }
 
 .nav-links {
@@ -73,18 +80,34 @@ body {
     color: var(--text-dark);
     text-decoration: none;
     font-weight: 500;
-    font-size: 16px;
-    transition: color 0.3s ease;
+    font-size: 15px;
+    transition: all 0.3s ease;
+    position: relative;
 }
 
 .nav-links a:hover {
-    color: var(--primary-green);
+    color: var(--fb-navy);
+}
+
+.nav-links a::after {
+    content: '';
+    position: absolute;
+    bottom: -4px;
+    left: 0;
+    width: 0;
+    height: 2px;
+    background: var(--fb-gold);
+    transition: width 0.3s ease;
+}
+
+.nav-links a:hover::after {
+    width: 100%;
 }
 
 /* Hero Section */
 .hero {
-    padding: 80px 0;
-    background: linear-gradient(135deg, var(--primary-light) 0%, #ffffff 100%);
+    padding: 100px 0;
+    background: linear-gradient(135deg, var(--fb-light-blue) 0%, #ffffff 100%);
 }
 
 .hero .container {
@@ -98,7 +121,7 @@ body {
     font-size: 56px;
     line-height: 1.2;
     margin-bottom: 24px;
-    color: var(--primary-dark);
+    color: var(--fb-navy);
     font-weight: 700;
 }
 
@@ -113,6 +136,7 @@ body {
     margin-top: 12px !important;
     font-size: 14px;
     color: var(--text-light);
+    font-weight: 500;
 }
 
 /* Phone Mockup */
@@ -122,7 +146,7 @@ body {
     background: #000;
     border-radius: 40px;
     padding: 12px;
-    box-shadow: 0 20px 60px rgba(0, 0, 0, 0.15);
+    box-shadow: 0 30px 60px rgba(0, 51, 102, 0.25);
     margin: 0 auto;
     position: relative;
 }
@@ -152,7 +176,7 @@ body {
 
 .status-bar {
     height: 30px;
-    background: var(--primary-green);
+    background: linear-gradient(90deg, var(--fb-navy) 0%, #005599 100%);
 }
 
 .app-header {
@@ -160,7 +184,7 @@ body {
     justify-content: space-between;
     align-items: center;
     padding: 10px 20px;
-    background: var(--primary-green);
+    background: linear-gradient(90deg, var(--fb-navy) 0%, #005599 100%);
     color: white;
     font-weight: 600;
     font-size: 12px;
@@ -173,12 +197,12 @@ body {
 }
 
 .wallet-card {
-    background: linear-gradient(135deg, var(--primary-green) 0%, #00873e 100%);
+    background: linear-gradient(135deg, var(--fb-navy) 0%, #005599 100%);
     color: white;
     padding: 24px;
     border-radius: 16px;
     margin-bottom: 24px;
-    box-shadow: 0 8px 20px rgba(0, 166, 81, 0.2);
+    box-shadow: 0 12px 30px rgba(0, 51, 102, 0.3);
 }
 
 .wallet-card p {
@@ -209,6 +233,7 @@ body {
     text-align: center;
     font-size: 11px;
     font-weight: 500;
+    color: var(--fb-navy);
 }
 
 .action-icon {
@@ -225,32 +250,33 @@ body {
     cursor: pointer;
     transition: all 0.3s ease;
     display: inline-block;
+    letter-spacing: 0.5px;
 }
 
 .cta-button.primary {
-    background-color: var(--primary-green);
+    background: linear-gradient(135deg, var(--fb-navy) 0%, #005599 100%);
     color: white;
 }
 
 .cta-button.primary:hover {
-    background-color: #009345;
     transform: translateY(-2px);
-    box-shadow: 0 8px 20px rgba(0, 166, 81, 0.3);
+    box-shadow: 0 12px 30px rgba(0, 51, 102, 0.3);
 }
 
 .cta-button.secondary {
     background-color: transparent;
-    color: var(--primary-green);
-    border: 2px solid var(--primary-green);
+    color: var(--fb-navy);
+    border: 2px solid var(--fb-navy);
 }
 
 .cta-button.secondary:hover {
-    background-color: var(--primary-light);
+    background-color: var(--fb-light-blue);
+    transform: translateY(-2px);
 }
 
 /* Features Section */
 .features {
-    padding: 80px 0;
+    padding: 100px 0;
     background-color: #ffffff;
 }
 
@@ -258,7 +284,7 @@ body {
     font-size: 42px;
     text-align: center;
     margin-bottom: 60px;
-    color: var(--primary-dark);
+    color: var(--fb-navy);
     font-weight: 700;
 }
 
@@ -274,13 +300,14 @@ body {
     border-radius: 12px;
     text-align: center;
     transition: all 0.3s ease;
-    border: 1px solid var(--border-light);
+    border: 2px solid transparent;
 }
 
 .feature-card:hover {
     transform: translateY(-8px);
-    box-shadow: 0 16px 40px rgba(0, 166, 81, 0.1);
-    border-color: var(--primary-green);
+    box-shadow: 0 20px 50px rgba(0, 51, 102, 0.15);
+    border-color: var(--fb-navy);
+    background: white;
 }
 
 .feature-icon {
@@ -292,7 +319,7 @@ body {
 .feature-card h3 {
     font-size: 20px;
     margin-bottom: 12px;
-    color: var(--primary-dark);
+    color: var(--fb-navy);
     font-weight: 600;
 }
 
@@ -304,8 +331,8 @@ body {
 
 /* Benefits Section */
 .benefits {
-    padding: 80px 0;
-    background: linear-gradient(135deg, var(--primary-light) 0%, #ffffff 100%);
+    padding: 100px 0;
+    background: linear-gradient(135deg, var(--fb-light-blue) 0%, #ffffff 100%);
 }
 
 .benefits .container {
@@ -318,7 +345,7 @@ body {
 .benefits h2 {
     font-size: 42px;
     margin-bottom: 40px;
-    color: var(--primary-dark);
+    color: var(--fb-navy);
     font-weight: 700;
 }
 
@@ -334,16 +361,23 @@ body {
 }
 
 .check-icon {
-    color: var(--primary-green);
-    font-size: 24px;
+    color: var(--fb-gold);
+    font-size: 28px;
     font-weight: 700;
     flex-shrink: 0;
+    width: 32px;
+    height: 32px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: var(--fb-light-blue);
+    border-radius: 50%;
 }
 
 .benefits-list h4 {
     font-size: 18px;
     margin-bottom: 8px;
-    color: var(--primary-dark);
+    color: var(--fb-navy);
     font-weight: 600;
 }
 
@@ -363,13 +397,13 @@ body {
     padding: 32px;
     border-radius: 12px;
     text-align: center;
-    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.08);
-    border-left: 4px solid var(--primary-green);
+    box-shadow: 0 8px 24px rgba(0, 51, 102, 0.1);
+    border-top: 4px solid var(--fb-gold);
 }
 
 .stat h3 {
     font-size: 36px;
-    color: var(--primary-green);
+    color: var(--fb-navy);
     margin-bottom: 8px;
     font-weight: 700;
 }
@@ -379,10 +413,141 @@ body {
     font-size: 14px;
 }
 
+/* Security Section */
+.security {
+    padding: 100px 0;
+    background: white;
+}
+
+.security h2 {
+    font-size: 42px;
+    text-align: center;
+    margin-bottom: 16px;
+    color: var(--fb-navy);
+    font-weight: 700;
+}
+
+.security-subtitle {
+    text-align: center;
+    color: var(--text-light);
+    margin-bottom: 60px;
+    font-size: 18px;
+}
+
+.security-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 32px;
+}
+
+.security-card {
+    background: var(--fb-light-blue);
+    padding: 40px;
+    border-radius: 12px;
+    text-align: center;
+    border: 2px solid transparent;
+    transition: all 0.3s ease;
+}
+
+.security-card:hover {
+    border-color: var(--fb-navy);
+    box-shadow: 0 12px 30px rgba(0, 51, 102, 0.15);
+}
+
+.security-icon {
+    font-size: 48px;
+    margin-bottom: 16px;
+}
+
+.security-card h3 {
+    font-size: 18px;
+    margin-bottom: 12px;
+    color: var(--fb-navy);
+    font-weight: 600;
+}
+
+.security-card p {
+    color: var(--text-light);
+    font-size: 14px;
+}
+
+/* Testimonials Section */
+.testimonials {
+    padding: 100px 0;
+    background: linear-gradient(135deg, var(--fb-light-blue) 0%, #ffffff 100%);
+}
+
+.testimonials h2 {
+    font-size: 42px;
+    text-align: center;
+    margin-bottom: 60px;
+    color: var(--fb-navy);
+    font-weight: 700;
+}
+
+.testimonials-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+    gap: 32px;
+}
+
+.testimonial-card {
+    background: white;
+    padding: 32px;
+    border-radius: 12px;
+    box-shadow: 0 8px 24px rgba(0, 51, 102, 0.1);
+    border-left: 4px solid var(--fb-gold);
+}
+
+.stars {
+    color: var(--fb-gold);
+    font-size: 16px;
+    margin-bottom: 16px;
+    letter-spacing: 2px;
+}
+
+.testimonial-card p {
+    color: var(--text-light);
+    font-size: 15px;
+    margin-bottom: 20px;
+    line-height: 1.7;
+    font-style: italic;
+}
+
+.testimonial-author {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.avatar {
+    width: 44px;
+    height: 44px;
+    background: var(--fb-navy);
+    color: white;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: 600;
+}
+
+.testimonial-author h4 {
+    font-size: 15px;
+    color: var(--fb-navy);
+    margin-bottom: 2px;
+}
+
+.testimonial-author p {
+    font-size: 13px;
+    color: var(--text-light);
+    margin: 0;
+}
+
 /* CTA Section */
 .cta-section {
-    padding: 80px 0;
-    background: linear-gradient(135deg, var(--primary-dark) 0%, var(--primary-green) 100%);
+    padding: 100px 0;
+    background: linear-gradient(135deg, var(--fb-navy) 0%, #005599 100%);
     color: white;
     text-align: center;
 }
@@ -408,12 +573,12 @@ body {
 }
 
 .cta-buttons .cta-button.primary {
-    background-color: white;
-    color: var(--primary-green);
+    background: white;
+    color: var(--fb-navy);
 }
 
 .cta-buttons .cta-button.primary:hover {
-    background-color: var(--bg-light);
+    background: var(--fb-light-blue);
 }
 
 .cta-buttons .cta-button.secondary {
@@ -430,21 +595,31 @@ body {
     display: flex;
     gap: 20px;
     justify-content: center;
+    flex-wrap: wrap;
 }
 
-.store-link img {
-    height: 42px;
-    opacity: 0.9;
-    transition: opacity 0.3s ease;
+.store-link {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    padding: 14px 28px;
+    background: white;
+    color: var(--fb-navy);
+    text-decoration: none;
+    border-radius: 8px;
+    font-weight: 600;
+    font-size: 15px;
+    transition: all 0.3s ease;
 }
 
-.store-link:hover img {
-    opacity: 1;
+.store-link:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
 }
 
 /* Footer */
 .footer {
-    background-color: var(--primary-dark);
+    background-color: var(--fb-navy);
     color: white;
     padding: 60px 0 20px;
 }
@@ -460,6 +635,7 @@ body {
     margin-bottom: 16px;
     font-size: 16px;
     font-weight: 600;
+    color: var(--fb-gold);
 }
 
 .footer-section ul {
@@ -476,7 +652,7 @@ body {
 }
 
 .footer-section a:hover {
-    color: var(--primary-green);
+    color: var(--fb-gold);
 }
 
 .footer-bottom {
@@ -535,11 +711,22 @@ body {
     }
 
     .features h2,
-    .benefits h2 {
+    .benefits h2,
+    .security h2,
+    .testimonials h2 {
         font-size: 32px;
     }
 
     .cta-section h2 {
         font-size: 32px;
+    }
+
+    .app-stores {
+        flex-direction: column;
+    }
+
+    .store-link {
+        width: 100%;
+        justify-content: center;
     }
 }
