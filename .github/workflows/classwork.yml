@@ -7,6 +7,7 @@ jobs:
       - run: echo "Saflos is good" > note.txt
       - run: cat note.txt
   two:
-    runs-on: ubuntu-latest
+    runs-on: ubuntu-24.04
+    needs: one
     steps:
-      - run: cat ${{ needs.output.job.one}}"
+      - run: cat note.txt
