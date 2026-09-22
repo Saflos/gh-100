@@ -10,4 +10,4 @@ jobs:
     needs: one
     runs-on: ubuntu-latest
     steps:
-      - run: cat ${{ needs.outputs.one }}"
+      - run: cat note.txt
